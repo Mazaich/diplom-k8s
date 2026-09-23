@@ -1,0 +1,6 @@
+# Secrets
+*secret*.yaml
+*secret*.yml
+kubeconfig
+*.kubeconfig
+.env

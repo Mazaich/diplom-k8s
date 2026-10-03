@@ -1,0 +1,29 @@
+github:
+  user: Mazaich
+  token: "REPLACE_WITH_GITHUB_TOKEN"
+  secret: "REPLACE_WITH_WEBHOOK_SECRET"
+
+orgAllowlist: github.com/Mazaich/*
+
+replicaCount: 1
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 256Mi
+  limits:
+    cpu: 500m
+    memory: 512Mi
+
+service:
+  type: LoadBalancer
+  port: 80
+
+environment:
+  ATLANTIS_LOG_LEVEL: info
+
+defaultTFVersion: "1.16.3"
+
+serviceAccount:
+  create: true
+  name: atlantis
